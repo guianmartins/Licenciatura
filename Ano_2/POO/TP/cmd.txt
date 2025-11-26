@@ -1,0 +1,19 @@
+move 1 D
+move 1 D
+move 1 D
+moedas 1000
+precos
+cidade a
+barbaro 1 1
+saves ola
+prox 2
+move 1 E
+move 1 B
+move 1 E
+saves ole
+lists
+loads ola
+dels ola
+lists
+loads ole
+terminar

@@ -1,0 +1,21 @@
+linhas 10
+colunas 20
+...............+++++
+..........++++++++++
+..........a+++++++++
+...1.........+++++++
+........2.....++++++
+....+c...........b++
+...++++..........+++
+....++............++
+.....3........!.....
+..........4.........
+moedas 1000
+instantes_entre_novos_itens 10
+duração_item 20
+max_itens 5
+preço_venda_mercadoria 2
+preço_compra_mercadoria 1
+preço_caravana 100
+instantes_entre_novos_barbaros 40
+duração_barbaros 60
