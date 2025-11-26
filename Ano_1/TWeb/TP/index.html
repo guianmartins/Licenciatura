@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id ="body">
+   <div class="escuro"></div>
+
+   <div class="donation" id="containerDonate">
+        <div class="container-donation">
+
+            <div class="close">
+                <img id="close" src="Img/closeDonate.png">
+                <span> Donate</span>
+            </div>
+            <div class="donation-type">
+                <button id ="once" class="active-type" value="Once">Once</button>
+                <button id ="monthly" value="Monthly">Monthly</button>
+            </div>
+
+            <label class="label-choose">Choose an amount to give</label>
+            <div class="quanties-donation">
+                <button id ="20" class="active-amount" value="20">20$</button>
+                <button id ="40" value = "40">40$</button>
+                <button id ="80" value="80">80$</button>
+                <input id ="other" type="number" class="other" placeholder="$ other amount">
+            </div>
+            
+            <label class="label-Informations">Informations</label>
+            <div class="informations-donater">
+                <div class="principal">
+                    <input type="email" class="email"  id="emailInput" placeholder="email">
+                    <div class="buttons-information">
+                        <button id="button-particular" value = "Particular">Particular</button>
+                        <button id="button-company" value="Company">Company</button>
+                    </div>
+                    <select class="Countries">
+                        <option value="Portugal">Portugal</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Afeganistão">Afeganistão</option>
+                        <option value="Ucrania">Ucrania</option>
+                        <option value="China">China</option>
+                        <option value="Brasil">Brasil</option>
+                    </select>
+                </div>
+                <div class="secundary">
+                    <div class="particular-information" id="particular-information">
+                        <input type="text" placeholder="Name" class="inputs-particular" id="inputNameParticular">
+                        <input type="text" placeholder="Surname" class="inputs-particular" id="inputSurnameParticular">
+                        <input type="number" placeholder="Number" class="inputs-particular" id="inputNumberParticular">
+                        <input type="number" placeholder="NIF" class="inputs-particular" id="inputNIFParticular">
+                    </div>
+
+                    <div class="company-information" id ="company-information">
+                        <input type="text" placeholder="Name" class="inputs-company" id="inputNameCompany">
+                        <input type="number" placeholder="Number" class="inputs-company" id="inputNumberCompany">
+                        <input type="number" placeholder="NIF" class="inputs-company" id="inputNifCompany">
+                        <input type="text" placeholder="Adress" class="inputs-company" id = "adress">
+                    </div>
+                </div>
+            </div>
+
+            <label class="label-Payments">Payment Method</label>
+            <div class="payments">
+                <div class="payments-once" id="payments-once">
+                    <button id="once-C" class="active-payment-once">Credit Card</button>
+                    <button id="once-P">Paypal</button>
+                    <button id="once-A">ATM</button>
+                    <button id="once-M">MbWay</button>
+                </div>
+
+                <div class="payments-monthly" id ="payments-monthly">
+                    <button class="active-payment-monthly" id="monthly-C">Credit Card</button>
+                    <button id="monthly-D">Direct Debit</button>
+                    <input type="text" class="IBAN" placeholder="IBAN" id = "IBAN">
+                </div>
+            </div>
+
+            <button class="Confirm" id = "confirmButton">Confirm</button>
+
+            <div class = "text" id = "text">
+                <p id = "textLabel"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Menu-->
+    <header id="menu-principal"> 
+        <div class="container-header"><!--Container onde estao o logo e o menu do site-->
+            <div id="menu-logo-container"><img id="menu-logo" src="Img/Logo.png"></img></div><!--Logo do site-->
+
+            <div class="container-menu"><!--container com os links do menu-->
+                <ul id="menu-list-item"><!--Criação da lista do menu-->
+                    <li id="menu-item1">
+                        <a id = "link-list-items" href="#">Who we are</a>
+                        <ul class = "menu-item1-submenu">
+                            <li id = "ms1-item1"><a href="#" class="menu-item-submenu-bold">Mission and Values</a></li>
+                            <li id = "ms1-item2"><a href="#" >Our Approach</a></li>
+                            <li id = "ms1-item3"><a href="#">Our History</a></li>
+                            <li id = "ms1-item4"><a href="#">Who We Serve</a></li>
+                            <li id = "ms1-item5"><a href="#"> 2023-2027 Strategy</a></li>
+                            <li id = "ms1-item6"><a href="#">FAQs</a></li>
+                            <li id = "ms1-item7"><a href="#" class="menu-item-submenu-bold" >Our Team</a></li>
+                            <li id = "ms1-item8"><a href="#">Careers</a></li>
+                            <li id = "ms1-item9"><a href="#">Where We Work</a></li>
+                            <li id = "ms1-item10"><a href="#">Partners</a></li>
+                            <li id = "ms1-item11"><a href="#">Contact</a></li>
+                            <li id = "ms1-item12"><a href="#" class="menu-item-submenu-bold" >Our Impact</a></li>
+                            <li id = "ms1-item13"><a href="#">Refugee Stories</a></li>
+                            <li id = "ms1-item14"><a href="#">Impact Reports</a></li>
+                            <li id = "ms1-item15"><a href="#">Financials</a></li>
+                            <li id = "ms1-item16"><a href="#">Awards</a></li>
+                        </ul>
+                    </li>
+
+                    <li id="menu-item2">
+                        <a id = "link-list-items" href="#">Our Work</a>
+                        <ul class = "menu-item2-submenu">
+                            <li id = "ms2-item1"><a href="#" class="menu-item-submenu-bold" >Self-Reliance</a></li>
+                            <li id = "ms2-item2"><a href="#" class="menu-item-submenu-bold" >Resettlement</a></li>
+                            <li id = "ms2-item3"><a href="#" class="menu-item-submenu-bold" >Other Pathways to Safety</a></li>
+                            <li id = "ms2-item4"><a href="#">Urban Refugee Protection</a></li>
+                            <li id = "ms2-item5"><a href="#">Labor Mobility</a></li>
+                            <li id = "ms2-item6"><a href="#">Refugee Self-Reliance Initiative</a></li>
+                            <li id = "ms2-item7"><a href="#">Family Reunification</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item3">
+                        <a id = "link-list-items" href="#">Latest</a>
+                        <ul class = "menu-item3-submenu">
+                            <li id = "ms3-item1"><a href="#" class="menu-item-submenu-bold" >News</a></li>
+                            <li id = "ms3-item2"><a href="#" class="menu-item-submenu-bold" >Videos</a></li>
+                            <li id = "ms3-item3"><a href="#" class="menu-item-submenu-bold">Publications</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item4"><a  id = "link-list-items" href="#">Ways to give</a></li>
+                    <li id="menu-item5"><a  id = "link-list-items" href="#">Donate</a></li>
+                    <li id="menu-item6">
+                        <button id="toogle_Sandwich">
+                            <span id="Sandwich_1"></span>
+                            <span id="Sandwich_2"></span>
+                            <span id="Sandwich_3"></span>
+                            <span id="Sandwich_4"></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--Menu Responsivo para mobile e tablets-->
+    <div id="menu-responsive" value= "Responsive">
+        <div class="container-responsive">
+            <div class="container-menu-responsive" id = "container-menu-responsive">
+                <a  id= "button-menu-responsive" href="#">Donate</a>
+                <img id = "close-menu-responsive" src="Img/close.png">
+
+                <div class="container-items-menu-responsive">
+                    <ul class ="list-items-menu-responsive">
+
+                        <li id = "menu-responsive-item-1">
+                            <a href="#" class="item-principal">Our Work</a>
+                            <ul>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Our Impact</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Paterns</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Refugee Stories</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Self-Reliance</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">urban refugge Protection</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Self-Reliance Initiative</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Resettlement</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Where We Work</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Other Pathways to Safety</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Labor Mobility</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Family Reunification</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li id = "menu-responsive-item-2">
+                            <a href="#" class="item-principal">Who We are</a>
+                            <ul>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Mission and Values</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Our Approach</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Our History</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Who We Serve</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Team</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Contact</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">FAQs</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">2023-2027 Strategy</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Careers</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Awards</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li id = "menu-responsive-item-3">
+                            <a href="#" class="item-principal">Resources</a>
+                            <ul>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">News & Media</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Impact Reports</a></li>
+                                <li class = "sub-items"><a href="#" class="sub-items-style">Publications</a></li>
+                            </ul>
+                        </li>
+
+                        <li id = "menu-responsive-item-4">
+                            <a href="#" class="item-principal">Ways To Give</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="container-items-form-responsive">
+                    <h5>Subscribe to our Newsletter</h5>
+                    <form class="form-menu-responsive">
+                        <input type="text" id = "input-text-form" placeholder="emailaddress@company.com">
+                        <input type="submit" value ="go" id = "button-form">
+                    </form>
+                </div>
+
+
+                <div class="container-items-social-media-responsive">
+                    <a href="#"><img src="Img/facebook-logo.png"></a>
+                    <a href="#"><img src="Img/twitter.png"></a>
+                    <a href="#"><img src="Img/instagram.png"></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <main >
+        <section class = "slider-content">
+            <div class="image">
+                <img id = "imagem-principal"src="Img/p1.png">
+                
+                <div class="container-text">
+                    <h1>Two New Milestones for RefugePoint's Labor Mobility Program</h1>
+					<p>Last month, a cohort of eleven refugees departed for Canada through the Economic Mobility Pathways Pilot (EMPP) to start new jobs as Continuing Care Assistants, following months of COVID-related delays.</p>
+                    <div class="container-button-readmore">
+                        <a href="#">Read More</a>
+						<span><img src="Img/setaDireita.png"></span>
+                    </div>
+                </div>
+
+                <div class="buttons-slider">
+                    <button id="left-button1" ><img src="Img/left-arrow.png"></button>
+                    <button id="right-button1"><img src="Img/right-arrow.png"></button>
+                </div>
+
+                <div class="bullets">
+                    <div class="bullet" id = "inicial"></div>
+                    <div class="bullet" ></div>
+                    <div class="bullet" ></div>
+                    <div class="bullet" ></div>
+                </div>
+            </div>
+        
+        </section>
+
+
+        <section class="Mission-text">
+			<div class = "container-mission-text">
+				<h2>Mission</h2>
+				<p>RefugePoint advances lasting solutions for refugees and supports the humanitarian community to do the same.</p>
+			</div>
+		</section>
+
+        <section class="why-refugees">
+			<div class="container">
+				<div class="principal-information">
+					<h2 class="title">Why Refugees</h2>
+					<p>We focus on finding lasting solutions for at-risk refugees. We believe that everyone benefits when refugees are given a chance to use their talents and skills to contribute to their host countries and to the world.</p>
+					<a href="#" class="button-Lead-More">learn more</a>
+				</div>
+			
+				<div class="card" id= "card1">
+					<div class="title">
+						<div class = "img">
+							<img src="Img/hourglass.png">
+						</div>
+						<p class="txt">20 +<span>years</span></p>
+					</div>
+					<p>The average length of time before a refugee can return home.</p>
+				</div>              
+				<div class="card" id= "card2">
+					<div class="title">
+						<div class = "img">
+							<img src="Img/people.png">
+						</div>
+						<p class="txt">108<span>million</span></p>
+					</div>
+					<p>Forcibly displaced people worldwide, including 35 million refugees.</p>
+				</div>    
+			</div>  
+		</section>
+
+        <section class="Yadasa">
+			<div class="img-Yadasa"><img src="Img/homeFAQs.jpg"></div>
+			<div class="container-text-yadasa">
+				<div class="text-yadasa">
+					<p>I have no more worries, no more stress, and no more fear. Here, I am a very happy person. Here, there is no threat against my life, and I am looking forward to starting my Ph.D. very soon.</p>
+					<h2>Yadasa</h2>
+					<div class="button-read">
+						<a href="#">Read The Full Story</a>
+						<span><img src="Img/setaDireita.png"></span>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+        <section class = "our-tactics">
+			<div class="container-ourTactics">
+					<div class="title">
+						<h2>Our Tactics</h2>
+						<p>We take a three-pronged approach to achieving impact:</p>
+					</div>
+
+					<div class="boxs">
+						<div class="box" id="box1">
+							<div class="img-box"><img src="Img/tacticsDirectServices.png"></div>
+							<div class="text-box">
+								<p id = "text-box"><span>Direct Services:</span> Providing services to meet the needs of individuals and households.</p>
+							</div>
+							<div class="logo-box"><img src="Img/group-of-three-men-standing-side-by-side-hugging-each-other.png"></div>
+						</div>
+						<div class="box" id="box2">
+							<div class="img-box"><img src="Img/tacticsSystemsChange.png"></div>
+							<div class="text-box">
+								<p id = "text-box"><span>Field Building:</span>  Supporting other organizations to accelerate and expand programs for reaching refugee populations.</p>
+							</div>
+							<div class="logo-box"><img src="Img/teachings (1).png"></div>
+						</div>
+						<div class="box" id="box3">
+							<div class="img-box"><img src="Img/Screen-Shot-2018-12-05-at-10.56.43-AM-e1698092838391.png"></div>
+							<div class="text-box">
+								<p id = "text-box"><span>Systems Change:</span> Influencing policy and decision-makers to drive large-scale change.</p>
+							</div>
+							<div class="logo-box"><img src="Img/resource.png"></div>
+						</div>
+					</div>
+			</div>
+		</section>
+
+        <section class = "refugee-solutions">
+			<div class="container-refugeeSolutions">
+				<div class="title">
+					<h2>Refugee Solutions</h2>
+				</div>
+	
+				<div class="text">
+					<p>We help refugees to find lasting solutions through self-reliance (helping them to meet their
+						own essential needs) and through resettlement and other pathways to safety such as relocation
+						for employment, education, and family reunification.</p>
+				</div>
+		
+				<div class="container-box">
+					<div class="box1">
+						<h3>Resettlement and Other Pathways to Safety</h3>
+						<p>Resettlement involves permanently relocating refugees to a safe country where they can rebuild their
+						   lives. It is often the best option for refugees who cannot return home and cannot reside safely in the
+						   country to which they have fled. RefugePoint identifies at-risk refugees and connects them with resettlement
+						   opportunities. Once they are referred to a receiving government, other agencies take over the resettlement process
+						   from there. We also help refugees to access other pathways to safety, such as relocation for employment, education,
+						   and family reunification.</p>
+						<div class="button-explore">
+							<a href="#">Explore</a>
+						</div>
+						<img src="Img/solutionsR-fade.jpg">
+					</div>
+			
+					<div class="box2">
+						<h3>Self-Reliance</h3>
+						<p>Self-reliance involves stabilizing refugees in the countries to which they have fled and helping them to advance,
+						   socially and economically, so that they can meet their essential household needs. Most refugees won’t have the 
+						   opportunity to resettle or return to their homes. However, given the right supports, many refugees are able to
+						   rebuild their lives in the host country to which they have fled.</p>
+						<div class="button-explore">
+							<a href="#">Explore</a>
+						</div>
+						<img src="Img/SolutionsSR-fade.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <section class="self-reliance">
+			<div class="box3">
+				<div class="imagem">
+					<div class="text">
+						<h3>Self-Reliance Initiative</h3>
+						<p>The Refugee Self-Reliance Initiative is a collaboration among NGOs, UNHCR, foundations, government agencies, 
+						the private sector and others that aims to support refugees to achieve a better quality of life and regain 
+						agency over their finances and futures, while at the same time supporting the peace, stability and prosperity 
+						goals of the hosting countries. The Initiative is focused on promoting self-reliance opportunities for refugees 
+						around the world to enjoy lives of dignity and hope, even during protracted periods of limbo in their host countries.</p>
+						<div class="button-read">
+							<a href="#">Read More</a>
+							<span><img src="Img/right-arrow-self-reliace.png"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <section class="flip-cards">
+            <h2>Our Impact</h2>
+
+            <div class="cards-content">
+                <div class="cards" id="card1">
+                    <div class="front-card">
+                        <img src="Img/jumping-man.png">
+                        <h3>119,745</h3>
+                        <p>Since 2005, we've helped 119,745 refugees to access resettlement, self-reliance, and other pathways to safety.</p>
+                    </div>
+
+                    <div class="back-card">
+                        <p>We have directly helped 119,745 refugees to access pathways to relocate to safety through resettlement, family reunification, work visas, and education visas. Through our self-reliance, field-building and systems change activities, our work has benefitted tens of thousands more.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="cards" id="card2">
+                    <div class="front-card">
+                        <img src="Img/internetHand.png">
+                        <h3>346</h3>
+                        <p>Since 2005, we have worked width refugees in 346 locations across 63 countries worldwide.</p>
+                    </div>
+
+                    <div class="back-card">
+                        <p>As of the end of 2022, we had worked with refugees in 346 locations across 63 countries in Africa, Southeast Asia, Central America, and the Middle East. We actively work to reach locations and refugee populations that have been underserved by the refugee response system.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "line"></div>
+        </section>
+
+        <section class="news">
+			<div class="container-news">
+				<div class="container-box">
+					<div class="box1">
+						<h2>In The News</h2>
+						<p>Stay up to date on RefugePoint in the News</p>
+					</div>
+		
+					<div class="box" id= "box1">
+						<a href="#" class =" image-box"><img src="Img/noticia1.jpg"></a>  
+						
+						<a href="#" class="title-notice">5 Key Takeaways from the 2023 Global Refugee Forum</a>
+						<p>Sasha Chanoff, Founder and CEO of RefugePoint, announces the Family Reunification pledge 
+						   during the Global Refugee Forum 2023. Photo: UNHCR</p>
+						<div class="button-read">
+							<a href="#">Read More</a>
+							<span><img src="Img/setaDireita.png"></span>
+						</div>
+					</div>
+		
+					<div class="box" id= "box2">
+						<a class =" image-box" href="#"><img src="Img/noticia2.jpg"></a>
+						<a class = "title-notice" href="#">Two New Milestones For RefugePoint’s Labor Mobility Team</a>
+						<p>EMPP Candidates who departed for Canada in October from L to R: Adifatah Abdulle Sabriye, 
+							Alamin Manji Musa, Sylvia Kamencu (RefugePoint’s Manager of Compl</p>
+						<div class="button-read">
+							<a href="#">Read More</a>
+							<span><img src="Img/setaDireita.png"></span>
+						</div>
+					</div>
+		
+					<div class="box" id= "box3">
+						<a class =" image-box" href="#"><img src="Img/noticia3.png"></a>
+						<a href="#" class="title-notice">Who We Are  </a>
+						<div class="button-read">
+							<a href="#">Read More</a>
+							<span><img src="Img/setaDireita.png"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="line-news"></div>
+		</section>
+
+        <section class="final-image">
+			<img src="Img/footer5.jpg">
+		</section>
+	</main>
+
+    <footer class="footer">
+		<div class="container-footer">
+			<div class="box-newsletter">
+	
+				<div class="Subscribe">
+					<h2>Subscribe to our newsletter</h2>
+					<div class="forms-footer">
+						<input type="email" name="email" id="email" placeholder="emailaddress@company.com">
+						<input type="button" id="btn_Go" value="Go">
+					</div>
+				</div>
+	
+				<div class="conectUs">
+					<h2>Connect with us</h2>
+					<div class="logo-forms">
+						<a href="#" class="logo-link"><span><img src="Img/facebook-footer.png"></span></a>
+						<a href="#" class="logo-link"><span><img src="Img/twitter-footer.png"></span></a>
+						<a href="#" class="logo-link"><span><img src="Img/instagram-footer.png"></span></a>
+					</div>
+				 </div>
+			</div>
+	
+			<div class="container-box">
+				<div class="box1">
+					<img src="Img/RefugePointFooter.png">
+					<p>RefugePoint advances lasting solutions for at-risk refugees, and supports the humanitarian community to do the same.</p>
+					<div class="box1-img">
+						<a href="#"><span><img src="Img/charitynavigator-300x231.png"></span></a>
+						<a href="#"><span><img src="Img/candid-seal-platinum-2023.png"></span></a>
+					</div>
+				</div>
+	
+				<div class="list">
+					<h2>Our Work</h2>
+					<ul>
+						<li><a href="#">Who We Serve</a></li>
+						<li><a href="#">Our Approach</a></li>
+						<li><a href="#">Our Impact</a></li>
+						<li><a href="#">Partners</a></li>
+						<li><a href="#">Refugee Stories</a></li>
+						<li><a href="#">Resettlement</a></li>
+						<li><a href="#">Self-Reliance</a></li>
+						<li><a href="#">Refugee Self-Reliance Initiative</a></li>
+						<li><a href="#">Where We Work</a></li>
+					</ul>
+				</div>
+	
+				<div class="list">
+					<h2>About Us</h2>
+					<ul>
+						<li><a href="#">Mission and Values</a></li>
+						<li><a href="#">Awards</a></li>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Team</a></li>    
+					</ul>
+				</div>
+	
+				<div class="list">
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="#">News & Media</a></li>
+						<li><a href="#">Impact Reports</a></li>
+						<li><a href="#">Publications</a></li>
+					</ul>
+				</div>
+	
+				<div class="list">
+					<h2>Recent Tweets</h2>
+				</div>
+			</div>
+		</div>
+		<div class="line-news"></div>
+		<div class="copyright">
+			<p>© Copyright 2023, RefugePoint | All Rights Reserved | Registered 501(c)(3). EIN: 20-2061482</p>
+		</div>
+	</footer>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
